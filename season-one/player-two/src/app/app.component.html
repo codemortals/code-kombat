@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="row">
+    <span>Angular + Material</span>
+    <span fxFlex></span>
+    <button mat-button routerLink="/"><mat-icon>house</mat-icon></button>
+    <button mat-button [routerLink]="['list']"><mat-icon>list</mat-icon></button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
