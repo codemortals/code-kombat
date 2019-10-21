@@ -1,5 +1,5 @@
 {
-    "name": "blog-challenge",
+    "name": "player-one",
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
@@ -7,7 +7,7 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng front-end/e2e"
     },
     "private": true,
     "dependencies": {
