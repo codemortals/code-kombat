@@ -3,5 +3,5 @@
     <img class="blog__image" [src]="blog.image" [alt]="blog.title">
     <p>{{ blog.content }}</p>
     <p class="blog__date">{{ blog.created | date: 'short' }}</p>
-    <a *ngIf="hasLink" [routerLink]="['/', 'view']">View more</a>
+    <a *ngIf="hasLink" [routerLink]="['/', 'view', blog._id]">View more</a>
 </div>

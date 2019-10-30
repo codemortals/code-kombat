@@ -6,15 +6,28 @@ class BlogController {
     public async create(req: Request, res: Response, next: NextFunction): Promise<void> {
         const blog = new BlogModel({
             title: req.body.title,
+            image: req.body.image,
         });
 
         try {
             await blog.save();
-            res.status(201);
-            res.send();
+            res.status(200);
+            req.params.blogId = blog._id;
+            next();
         } catch(error) {
             console.log(error);
             res.status(400);
+            res.send();
+        }
+    }
+
+    public async findOne(req: Request, res: Response, next: NextFunction): Promise<void> {
+        try {
+            const blogId = req.params.blogId;
+            const blog = await BlogModel.findById(blogId);
+            res.send(blog);
+        } catch(error) {
+            res.status(404);
             res.send();
         }
     }

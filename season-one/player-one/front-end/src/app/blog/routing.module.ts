@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BlogComponent } from './blog.component';
+import { BlogCreateComponent } from './create/create.component';
 import { BlogListComponent } from './list/list.component';
 import { BlogViewComponent } from './view/view.component';
 
@@ -11,7 +12,11 @@ const routes: Routes = [
         component: BlogComponent,
         children: [
             {
-                path: 'view',
+                path: 'create',
+                component: BlogCreateComponent,
+            },
+            {
+                path: 'view/:blogId',
                 component: BlogViewComponent,
             },
             {

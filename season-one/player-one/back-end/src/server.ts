@@ -15,7 +15,7 @@ app.set('trust proxy', true);
 
 /* Setup CORS security */
 const corsOpts: CorsOptions = {
-    origin: true,
+    origin: 'http://localhost:4200',
     methods: [ 'GET', 'POST', 'PATCH', 'DELETE', 'HEAD' ],
     allowedHeaders: [ 'Authorization', 'Content-Type' ],
     credentials: true,
@@ -27,6 +27,7 @@ app.use(cors(corsOpts));
 /* Common API security features */
 app.use(helmet({
     frameguard: { action: 'sameorigin' },
+    contentSecurityPolicy: { directives: { 'frame-ancestors': [ 'http://localhost:4200' ] } },
 }));
 
 app.use(Database);

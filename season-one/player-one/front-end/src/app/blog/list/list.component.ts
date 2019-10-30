@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { BlogService } from '../../services/blog.service';
-import { Blog } from '../../services/models/blog';
+import { Blog } from '../../services/models';
 
 @Component({
     templateUrl: './list.component.html',
@@ -13,11 +13,10 @@ export class BlogListComponent implements OnInit {
 
     constructor(
         private blogService: BlogService,
-    ) {
-    }
+    ) { }
 
     public ngOnInit(): void {
-        this.blogService.findAllBlogs().subscribe((blogList) => this.blogList = blogList);
+        this.blogService.findAllBlogs().subscribe((blogList) => this.blogList = blogList.list);
     }
 
 }

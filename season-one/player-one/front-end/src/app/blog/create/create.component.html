@@ -1,0 +1,15 @@
+<form (submit)="saveBlog()" [formGroup]="blogForm">
+
+    <div>
+        <label for="title">Title</label>
+        <input id="title" formControlName="title">
+    </div>
+
+    <div>
+        <label for="image">Image URL</label>
+        <input id="image" formControlName="image">
+    </div>
+
+    <button>Create Blog</button>
+
+</form>

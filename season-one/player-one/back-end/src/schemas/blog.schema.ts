@@ -8,6 +8,10 @@ const BlogSchema = new Schema<Blog>({
         required: true,
         trim: true,
     },
+    image: {
+        type: String,
+        trim: true,
+    },
     created: {
         type: Date,
         default: Date.now
