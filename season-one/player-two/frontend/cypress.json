@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "testFiles": "**/*.feature",
+  "fixturesFolder": "cypress/fixtures",
+  "integrationFolder": "cypress/features",
+  "pluginsFile": "cypress/plugins",
+  "screenshotsFolder": "cypress/screenshots",
+  "supportFile": "cypress/support",
+  "videosFolder": "cypress/videos",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080
+}
