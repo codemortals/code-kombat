@@ -1,0 +1,22 @@
+{
+    "list": [
+        {
+            "_id": "000000001",
+            "title": "Example One",
+            "image": "https://placekitten.com/300/200",
+            "created": "2019-11-04T19:45:00.000Z"
+        },
+        {
+            "_id": "000000002",
+            "title": "Example Two",
+            "image": "https://placekitten.com/300/200",
+            "created": "2019-11-04T18:30:00.000Z"
+        },
+        {
+            "_id": "000000003",
+            "title": "Example Three",
+            "image": "https://placekitten.com/300/200",
+            "created": "2019-11-04T17:15:00.000Z"
+        }
+    ]
+}
