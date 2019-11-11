@@ -1,14 +1,20 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-button routerLink="/list"><mat-icon>arrow_back</mat-icon></button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 <mat-card>
-    <mat-card-header>
-      <img mat-card-avatar [src]="post.image" *ngIf="post.image">
-      <mat-card-title>{{ post.title }}</mat-card-title>
-      <mat-card-subtitle *ngIf="post.subtitle">{{ post.subtitle }}</mat-card-subtitle>
-    </mat-card-header>
-    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
-    <mat-card-content>
-      <p>{{ post.description }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button routerLink="/list">Back</button>
-    </mat-card-actions>
-  </mat-card>
+  <mat-card-header>
+    <img mat-card-avatar [src]="post.image" *ngIf="post.image">
+    <mat-card-title>{{ post.title }}</mat-card-title>
+    <mat-card-subtitle *ngIf="post.subtitle">{{ post.subtitle }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="post.image2">
+  <mat-card-content>
+    <p>{{ post.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button routerLink="/list">Back</button>
+  </mat-card-actions>
+</mat-card>

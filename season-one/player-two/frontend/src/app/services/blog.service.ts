@@ -11,6 +11,10 @@ export class BlogService {
 
   private posts: PostModel[] = [];
 
+  create(): Observable<PostModel[]> {
+    return this.http.get<PostModel[]>('http://localhost:3001/fake');
+  }
+
   findAll(): Observable<PostModel[]> {
     return this.http.get<PostModel[]>('http://localhost:3001/blogs');
   }

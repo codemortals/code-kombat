@@ -3,5 +3,6 @@ export interface PostModel {
   title: string;
   subtitle?: string;
   image?: string;
+  image2?: string;
   description: string;
 }
