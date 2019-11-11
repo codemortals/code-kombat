@@ -12,6 +12,10 @@ const BlogSchema = new Schema<Blog>({
         type: String,
         trim: true,
     },
+    content: {
+        type: String,
+        trim: true,
+    },
     created: {
         type: Date,
         default: Date.now

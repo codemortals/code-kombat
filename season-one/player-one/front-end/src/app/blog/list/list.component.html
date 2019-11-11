@@ -1,5 +1,3 @@
-<a [routerLink]="['/create']">Create a Blog</a>
-
 <div class="blog-list" *ngFor="let blog of blogList">
     <div>
         <app-blog-item [blog]="blog" [hasLink]="true"></app-blog-item>

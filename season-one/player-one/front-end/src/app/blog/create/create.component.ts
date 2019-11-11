@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
     templateUrl: './create.component.html',
+    styleUrls: ['./create.component.scss'],
 })
 export class BlogCreateComponent implements OnInit {
 
@@ -20,6 +21,7 @@ export class BlogCreateComponent implements OnInit {
         this.blogForm = this.form.group({
             title: [ undefined, [ Validators.required ] ],
             image: [ undefined, [] ],
+            content: [ undefined, [] ],
         });
     }
 

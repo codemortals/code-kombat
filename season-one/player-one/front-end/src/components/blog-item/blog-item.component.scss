@@ -1,19 +1,46 @@
 .blog {
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
     border-radius: 6px;
     padding: 1rem;
-    background-color: #eee;
+    background-color: #fafafa;
 
-    &__title {
-        font-size: 1.4rem;
+    &__header {
+        display: grid;
+        grid-template-columns: auto max-content;
+
+        &__title {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        &__date {
+            font-size: 0.8rem;
+            margin: 0 0 1rem;
+        }
+
+        a {
+            color: #884718;
+            font-size: 0.8rem;
+            text-decoration: none;
+
+            &:visited, &:active, &:focus {
+                color: #884718;
+            }
+
+            &:hover {
+                color: #162688;
+            }
+        }
     }
 
     &__image {
-        width: 400px;
+        max-width: 200px;
     }
 
-    &__date {
-        font-size: 0.8rem;
+    &__content {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: min-content auto;
     }
 
 }

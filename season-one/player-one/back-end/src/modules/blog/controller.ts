@@ -7,6 +7,7 @@ class BlogController {
         const blog = new BlogModel({
             title: req.body.title,
             image: req.body.image,
+            content: req.body.content,
         });
 
         try {

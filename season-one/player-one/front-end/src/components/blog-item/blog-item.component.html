@@ -1,7 +1,13 @@
 <div class="blog">
-    <h1 class="blog__title">{{ blog.title }}</h1>
-    <img class="blog__image" [src]="blog.image" [alt]="blog.title">
-    <p>{{ blog.content }}</p>
-    <p class="blog__date">{{ blog.created | date: 'short' }}</p>
-    <a *ngIf="hasLink" [routerLink]="['/', 'view', blog._id]">View more</a>
+    <div class="blog__header">
+        <div>
+            <h1 class="blog__header__title">{{ blog.title }}</h1>
+            <p class="blog__header__date">{{ blog.created | date: 'MMM, d yyyy HH:mm' }}</p>
+        </div>
+        <a *ngIf="hasLink" [routerLink]="['/', 'view', blog._id]">View more</a>
+    </div>
+    <div class="blog__content">
+        <img class="blog__image" [src]="blog.image" [alt]="blog.title">
+        <p>{{ blog.content }}</p>
+    </div>
 </div>

@@ -1,3 +1,36 @@
+.navigation {
+    display: grid;
+    grid-template-columns: auto max-content;
+    background-color: #f8ff11;
+    padding: 0.5rem 1rem;
+    margin: 0 0 2rem;
+
+    &__title {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: min-content min-content;
+        grid-gap: 1rem;
+
+        a {
+            color: #884718;
+            font-size: 0.8rem;
+            text-decoration: none;
+
+            &:visited, &:active, &:focus {
+                color: #884718;
+            }
+
+            &:hover {
+                color: #162688;
+            }
+        }
+    }
+}
+
 .content {
     margin: auto;
     max-width: 800px;

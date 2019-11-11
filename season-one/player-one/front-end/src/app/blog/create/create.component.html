@@ -1,15 +1,11 @@
 <form (submit)="saveBlog()" [formGroup]="blogForm">
 
-    <div>
-        <label for="title">Title</label>
-        <input id="title" formControlName="title">
-    </div>
+    <app-input id="title" label="Title" formControlName="title"></app-input>
 
-    <div>
-        <label for="image">Image URL</label>
-        <input id="image" formControlName="image">
-    </div>
+    <app-input id="image" label="Image URL" formControlName="image"></app-input>
 
-    <button>Create Blog</button>
+    <app-input type="textarea" id="content" label="Blog Content" formControlName="content"></app-input>
+
+    <button [disabled]="blogForm.invalid">Create Blog</button>
 
 </form>

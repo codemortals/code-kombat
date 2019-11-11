@@ -1,5 +1,11 @@
 <div class="content">
-    <h1>My Blog</h1>
+    <div class="navigation">
+        <h1 class="navigation__title">My Blog</h1>
+        <div class="navigation__links">
+            <a [routerLink]="['/']"><fa-icon [icon]="['fas', 'home']" size="lg"></fa-icon></a>
+            <a [routerLink]="['/create']"><fa-icon [icon]="['fas', 'plus']" size="lg"></fa-icon></a>
+        </div>
+    </div>
 
     <router-outlet></router-outlet>
 </div>
